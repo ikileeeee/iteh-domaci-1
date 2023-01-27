@@ -24,14 +24,32 @@
 
 </head>
 <body>
+  <div      style="margin-left: 25%;margin-right: 25%;">                    
+                        <input type="search" id="pretraga" class="form-control"    onkeyup="pretragaPoImenu()"    placeholder="Search.." />
+                       
+                    
+                      
+                      
+                      <button type="button" class="btn btn-warning"  onclick="sortiraj()">Sortiraj<i class="fa fa-sort" aria-hidden="true" ></i></button>
+                      <select name="kriterijum" id="kriterijum" class="criteria">
+                          <option value="price">Cena</option> 
+                          <option value="name">Naziv</option>
+                    </select>
+
+
+                  
+                 
+          </div>
     <div class="pocetna">
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addModal">Dodaj novi proizvod</button>
-                <table class="table">
+                <table class="table" id="table">
             <thead>
                 <tr>
                 <th scope="col">ID</th>
                 <th scope="col">Naziv</th>
                 <th scope="col">Kategorija</th>
+                <th scope="col">Cena</th>
+
                 <th scope="col">Opcije</th>
                 
                 </tr>
@@ -42,6 +60,8 @@
                             <th  >   <?php   echo $red['id'];        ?>     </th>
                             <td> <?php   echo $red['naziv'];        ?> </td>
                             <td> <?php   echo $red['naziv_kategorije'];        ?> </td>
+                            <td> <?php   echo $red['cena'];        ?> </td>
+
                             <td><button type="button" class="btn btn-danger" onclick="obrisi(<?php echo   $red['id'];?>)">Obrisi</button>
                             <button type="button" class="btn btn-success"  data-toggle="modal" data-target="#profileModal" onclick="prikazi(<?php echo   $red['id'];?>)"      >Detalji</button></td>
                         </tr>

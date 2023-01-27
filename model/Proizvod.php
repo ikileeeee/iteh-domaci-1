@@ -18,7 +18,13 @@
             $this->kategorija_id=$kategorija_id; 
         }
  
- 
+        public static function vratiSveProizvode($conn){
+            $upit = "select * from proizvod p inner join kategorija k on k.kategorija_id=p.kategorija_id";
+            return $conn->query($upit);
+        }
+
+
+
 
     }
     

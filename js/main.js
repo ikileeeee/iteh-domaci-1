@@ -71,7 +71,7 @@ function prikazi(prikazid){
         $('#opisPreview').text(proizvod.opis);
         $('#cenaPreview').text(proizvod.cena);
  
-        document.getElementById("slikaPreview").src = 'images/'+nakit.slika;
+        document.getElementById("slikaPreview").src = 'images/'+proizvod.slika;
 
 
     }); 

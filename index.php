@@ -24,23 +24,24 @@
 
 </head>
 <body>
-  <div      style="margin-left: 25%;margin-right: 25%;">                    
-                        <input type="search" id="pretraga" class="form-control"    onkeyup="pretragaPoImenu()"    placeholder="Search.." />
-                       
-                    
-                      
-                      
-                      <button type="button" class="btn btn-warning"  onclick="sortiraj()">Sortiraj<i class="fa fa-sort" aria-hidden="true" ></i></button>
-                      <select name="kriterijum" id="kriterijum" class="criteria">
-                          <option value="price">Cena</option> 
-                          <option value="name">Naziv</option>
-                    </select>
 
-
-                  
-                 
-          </div>
     <div class="pocetna">
+      <div      style="margin-left: 25%;margin-right: 25%;">                    
+                          <input type="search" id="pretraga" class="form-control"    onkeyup="pretragaPoImenu()"    placeholder="Search.." />
+                        
+                      
+                        
+                        
+                        <button type="button" class="btn btn-warning"  onclick="sortiraj()">Sortiraj<i class="fa fa-sort" aria-hidden="true" ></i></button>
+                        <select name="kriterijum" id="kriterijum" class="criteria">
+                            <option value="price">Cena</option> 
+                            <option value="name">Naziv</option>
+                      </select>
+
+
+                    
+                  
+        </div>
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addModal">Dodaj novi proizvod</button>
                 <table class="table" id="table">
             <thead>

@@ -59,3 +59,24 @@ function dodaj(){
  
 
 }
+
+function prikazi(prikazid){
+    
+    
+    $.post("handler/get.php",{prikazid:prikazid},function(data,status){
+        console.log(data);
+        var proizvod=JSON.parse(data);//
+        console.log(proizvod); 
+        $('#nazivPreview').text(proizvod.naziv  );
+        $('#opisPreview').text(proizvod.opis);
+        $('#cenaPreview').text(proizvod.cena);
+ 
+        document.getElementById("slikaPreview").src = 'images/'+nakit.slika;
+
+
+    }); 
+
+ 
+    
+}
+

@@ -32,7 +32,10 @@
             
             return $conn->query($upit);
         }
-
+        public static function vrati($id, $conn){
+            $upit = " select * from proizvod p inner join kategorija k on p.kategorija_id = k.kategorija_id where id=$id";
+            return $conn->query($upit);
+        }
 
     }
     

@@ -42,7 +42,8 @@
                             <th  >   <?php   echo $red['id'];        ?>     </th>
                             <td> <?php   echo $red['naziv'];        ?> </td>
                             <td> <?php   echo $red['naziv_kategorije'];        ?> </td>
-                            <td><button type="button" class="btn btn-danger" onclick="obrisi(<?php echo   $red['id'];?>)">Obrisi</button><button type="button" class="btn btn-success">Detalji</button></td>
+                            <td><button type="button" class="btn btn-danger" onclick="obrisi(<?php echo   $red['id'];?>)">Obrisi</button>
+                            <button type="button" class="btn btn-success"  data-toggle="modal" data-target="#profileModal" onclick="prikazi(<?php echo   $red['id'];?>)"      >Detalji</button></td>
                         </tr>
 
 
@@ -127,7 +128,49 @@
 
 
 
+ 
+       <div class="modal fade" id="profileModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog cascading-modal modal-avatar modal-sm" role="document">
+            <!--Content-->
+            <div class="modal-content">
 
+            <!--Header-->
+            <div class="modal-header" >
+                <img src="" alt="avatar" id="slikaPreview" class="rounded"  style="margin-left: auto;margin-right: auto; width: 180px;height: auto;"  >
+            </div>
+            <!--Body-->
+            <div class="modal-body text-center mb-1">
+
+                <h5 class="mt-1 mb-2" id="nazivPreview"></h5>
+
+                <div class="md-form ml-0 mr-0" style="text-align: center;">
+                <p id="opisPreview">   </p>
+                <i id="cenaPreview" class="fa fa-tag"  aria-hidden="true"></i>
+                    <br>
+            
+                </div>
+
+        <div class="text-center mt-4">
+           
+
+
+        </div>
+      </div>
+
+
+      <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+         
+        </div>
+
+
+
+
+    </div>
+    <!--/.Content-->
+  </div>
+</div>
+ 
 
 
 
